@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="onInit()">
+
+    <h1>Minesweeper </h1>
+
+    <div class="levels">
+        Game Level:
+        <!-- <button class="click" onclick="onInit()">Restart</button> -->
+        <button class="click" onclick="changeLevel(4)"> 1 </button>
+        <button class="click" onclick="changeLevel(8)"> 2 </button>
+        <button class="click" onclick="changeLevel(12)"> 3 </button>
+    </div>
+
+    <h3>Timer: <span>0</span></h3>
+
+    <div class="board-container"></div>
+    <div id="right-click"></div>
+    <h4> &#169; 2024</h4>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

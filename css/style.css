@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(173, 173, 227);
+    text-align: center;
+    /* color: rgb(133, 99, 99); */
+    font-family: Cambria;
+
+}
+
+h1 {
+    padding: 10px;
+    margin-top: 30px;
+    color: rgb(74, 21, 21);
+}
+
+
+h2 {
+    font-family: Cambria;
+}
+
+
+.levels {
+
+    /* margin: 0 auto; */
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: Cambria;
+    font-size: 20px;
+
+}
+
+
+
+.click {
+    height: 25px;
+    width: 48px;
+    background-color: rgb(148, 56, 61);
+    border: 5px solid rgba(50, 30, 11, 0.189);
+    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+
+.board-container {
+
+    margin: 100px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+
+
+}
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(72, 41, 41);
+    margin: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 
+ .cell img{
+    width: 25px;
+    height: auto;
+}   */
+
+
+
+.showned {
+    background-color: rgb(75, 50, 54);
+
+}
+
+.cell {
+
+    border: solid 2px rgba(69, 30, 30, 0.892);
+    background-color: rgb(142, 47, 47);
+    width: 40px;
+    height: 40px;
+}
+
+
+
+.cell:hover {
+    opacity: 0.5;
+}
+
+
+/* .isShown{
+    border: solid 5px rgb(141, 71, 71);
+    background-color: rgba(69, 30, 30, 0.892);
+    width: 10px;
+    height: 10px;
+} */
