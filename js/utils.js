@@ -13,16 +13,17 @@ function renderBoard(board) {
             const cell = board[i][j]
             var cellClass = `cell cell-${i}-${j}`
 
-            // if (!cell.isShown) cellClass += 'cover'
             if (cell.isMine) cellClass += 'mine'
             if (cell.minesAroundCount) cellClass += 'negCount'
+            if (cell.isMarked) cellClass += 'marked'
             // // if isMine&&isSowe
 
             strHTML += `<td class="${cellClass}"
-                onclick="onCellClicked(this,${i},${j})" >`
-            'contextmenu'
-            if (cell.isMine && cell.isShown) strHTML += MINE
-            // if(!cell.isShown) strHTML += COVER
+                onclick= "onCellClicked(this,${i},${j})">`
+
+                if (cell.isMine && cell.isShow) strHTML += MINE_IMG
+                if (cell.isMarked) strHTML += MARKED_IMG
+
 
             strHTML += '</td>'
         }
