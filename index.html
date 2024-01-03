@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="onInit()">
+<body onload="onInit()" oncontextmenu="return false">
 
     <h1>Minesweeper </h1>
 
     <div class="levels">
         Game Level:
         <!-- <button class="click" onclick="onInit()">Restart</button> -->
-        <button class="click" onclick="changeLevel(1)"> 1 </button>
-        <button class="click" onclick="changeLevel(8)"> 2 </button>
-        <button class="click" onclick="changeLevel(12)"> 3 </button>
+        <button class="click" onclick="onSetLevel(1)"> 1 </button>
+        <button class="click" onclick="onSetLevel(2)"> 2 </button>
+        <button class="click" onclick="onSetLevel(3)"> 3 </button>
     </div>
 
-    <h3>Timer: <span>0</span></h3>
+    <!-- <div class="modal">
+        <button class="restart" onclick="onInit()" NORMAL></button>
+    </div> -->
+    
+    <div class="timer-container">Timer: <span class="minutes">00</span>:<span class="seconds">00</span></div>
 
     <div class="board-container"></div>
-  
+
     <h4> &#169; 2024</h4>
 
     <script src="js/utils.js"></script>

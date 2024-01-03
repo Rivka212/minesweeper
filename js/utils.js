@@ -13,17 +13,16 @@ function renderBoard(board) {
             const cell = board[i][j]
             var cellClass = `cell cell-${i}-${j}`
 
-            if (cell.isMine) cellClass += 'mine'
-            if (cell.minesAroundCount) cellClass += 'negCount'
-            if (cell.isMarked) cellClass += 'marked'
-            // // if isMine&&isSowe
+            // if (cell.isMine) cellClass += 'mine'
+            // if (cell.minesAroundCount) cellClass += 'negCount'
+            // if (cell.isMarked) cellClass += 'marked'
+            if (cell.isShown) cellClass += 'isShown'
 
-            strHTML += `<td class="${cellClass}"
-                onclick= "onCellClicked(this,${i},${j})">`
+            strHTML += `<td class=" ${cellClass}"
+                onclick="onCellClicked(this,${i},${j})"${cell}>`
 
-                if (cell.isMine && cell.isShow) strHTML += MINE_IMG
-                if (cell.isMarked) strHTML += MARKED_IMG
-
+            if (cell.isMine && cell.isShown) strHTML += MINE
+            if (cell.isMarked) strHTML += FLAG
 
             strHTML += '</td>'
         }
@@ -37,20 +36,14 @@ function renderBoard(board) {
 }
 
 
-// location is an object like this - { i: 2, j: 7 }
 function renderCell(location, value) {
-    const elCell = document.querySelector(`.cell-${location.i}-${location.j}`)
-    elCell.innerHTML = value
+    // var location = {i,j}
+    const elCell = document.querySelector(`.cell`)
+    // const elCell = document.querySelector(`.cell-${i}-${j}`)
+    // const elCell = document.querySelector(`.cell-${location.i}-${location.j}`)
+     elCell.innerHTML = value
+    
 }
-
-
-// function renderCell(location, value) {
-// 	const cellSelector = '.' + getClassName(location)
-// 	const elCell = document.querySelector(cellSelector)
-// 	elCell.innerHTML = value
-// }
-
-
 
 
 function getRandomInt(min, max) {
@@ -73,4 +66,14 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+
+function pad(val){
+    var valString = val +''
+    if(valString.length < 2){
+        return '0' + valString
+    }else{
+        return valString
+    }
 }
