@@ -1,7 +1,6 @@
 body {
     background-color: rgb(173, 173, 227);
     text-align: center;
-    /* color: rgb(133, 99, 99); */
     font-family: Cambria;
 
 }
@@ -19,16 +18,40 @@ h2 {
 
 
 .levels {
-
-    /* margin: 0 auto; */
     margin-bottom: 10px;
     padding: 5px;
     border-radius: 10px;
     font-family: Cambria;
     font-size: 20px;
-
 }
 
+
+.hidden {
+    display: none;
+}
+
+
+.modal {
+    height: 10px;
+    margin-right: 160px;
+}
+
+
+.restart {
+    border-radius: 50px;
+    height: 30px;
+    width: 30px;
+    border-left: 20px;
+    border-color: rgb(173, 173, 227);
+    background-color: rgb(173, 173, 227);
+}
+
+
+.modal img {
+    height: 30px;
+    border-radius: 50px;
+    margin-trim: 30px;
+}
 
 
 .click {
@@ -39,18 +62,14 @@ h2 {
     border-radius: 5px;
     border-radius: 10px;
     text-align: center;
-
-
 }
 
-.board-container {
 
-    margin: 100px auto;
+.board-container {
+    margin: 50px auto;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
-
-
 }
 
 
@@ -58,25 +77,17 @@ table {
     font-family: Arial, Helvetica, sans-serif;
     background-color: rgb(78, 58, 58);
     margin: auto;
-    padding: 10px;
+    padding: 5px;
     border-radius: 5px;
 }
-
-/* 
- .cell img{
-    width: 25px;
-    height: auto;
-}   */
-
 
 
 .showned {
     background-color: rgb(173, 140, 145);
-
 }
 
-.cell {
 
+.cell {
     border: solid 2px rgba(84, 79, 79, 0.892);
     background-color: rgb(136, 103, 103);
     width: 40px;
@@ -96,14 +107,35 @@ table {
 
 
 .isShown {
-    border: rgb(62, 60, 60);
     background-color: rgba(186, 170, 170, 0.892);
-
 }
 
-.restart{
-    border-radius:50px;
-    height: 20px;
-    width: 20px;
-    padding: 10px;
+.isShownMine {
+    background-color: rgb(212, 60, 60);
+}
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+
+    h1 {
+        color: rgb(199, 136, 150);
+    }
+}
+
+
+.btn-dark {
+    background-color: rgb(58, 52, 52);
+    border-color: rgb(34, 32, 32);
+    border-radius: 40px;
+    margin-left: 20px;
+    color: rgb(179, 179, 162);
+    height: 25px;
+    margin-bottom: 10px;
+}
+
+
+.timer-container {
+    margin-left: 80px;
 }

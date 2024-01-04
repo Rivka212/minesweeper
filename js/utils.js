@@ -13,13 +13,9 @@ function renderBoard(board) {
             const cell = board[i][j]
             var cellClass = `cell cell-${i}-${j}`
 
-            // if (cell.isMine) cellClass += 'mine'
-            // if (cell.minesAroundCount) cellClass += 'negCount'
-            // if (cell.isMarked) cellClass += 'marked'
-            if (cell.isShown) cellClass += 'isShown'
-
             strHTML += `<td class=" ${cellClass}"
-                onclick="onCellClicked(this,${i},${j})"${cell}>`
+                onclick="onCellClicked(this,${i},${j})"${cell}
+                onclick="onCellRightClicked(this,${i},${j})"${cell}>`
 
             if (cell.isMine && cell.isShown) strHTML += MINE
             if (cell.isMarked) strHTML += FLAG
@@ -32,17 +28,14 @@ function renderBoard(board) {
 
     const elBoard = document.querySelector('.board-container')
     elBoard.innerHTML = strHTML
-
 }
 
 
 function renderCell(location, value) {
-    // var location = {i,j}
-    const elCell = document.querySelector(`.cell`)
     // const elCell = document.querySelector(`.cell-${i}-${j}`)
-    // const elCell = document.querySelector(`.cell-${location.i}-${location.j}`)
-     elCell.innerHTML = value
-    
+    const elCell = document.querySelector(`.cell-${location.i}-${location.j}`)
+    elCell.innerHTML = value
+
 }
 
 
@@ -69,11 +62,11 @@ function getRandomColor() {
 }
 
 
-function pad(val){
-    var valString = val +''
-    if(valString.length < 2){
+function pad(val) {
+    var valString = val + ''
+    if (valString.length < 2) {
         return '0' + valString
-    }else{
+    } else {
         return valString
     }
 }
