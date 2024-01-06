@@ -20,12 +20,11 @@
     </div>
 
     <div class="modal">
-        <button class="restart" onclick="onInit()"><span class="normal"><img src="img/normal1.jpeg"
-                    alt=""></span></button>
+        <div class="lives"><span></span></div>
+        <span class="normal"><img src="img/normal1.jpeg" onclick="onInit(this)"></span>
         <span class="victory hidden"> <img src="img/smiling.png" alt=""></span>
         <span class="lose hidden"> <img src="img/lose.jpeg" alt=""></span> </button>
     </div>
-
 
     <div class="timer-container">Timer: <span class="minutes">00</span>:<span class="seconds">00</span>
         <button class="btn-dark" onclick="onToggleDarkMode()">dark</button>
@@ -33,7 +32,7 @@
 
     <div class="board-container"></div>
 
-    <h4> &#169; 2024</h4>
+    <h5>Rivka Bashari &#169; 2024</h5>
 
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>

@@ -16,6 +16,16 @@ h2 {
     font-family: Cambria;
 }
 
+h5{
+margin-top:190px; 
+
+
+}
+
+
+.lives{
+    margin-right: 70px;
+}
 
 .levels {
     margin-bottom: 10px;
@@ -49,8 +59,8 @@ h2 {
 
 .modal img {
     height: 30px;
-    border-radius: 50px;
-    margin-trim: 30px;
+    border-radius: 40px;
+    margin-left: 60px;
 }
 
 
@@ -129,7 +139,7 @@ table {
     background-color: rgb(58, 52, 52);
     border-color: rgb(34, 32, 32);
     border-radius: 40px;
-    margin-left: 20px;
+    margin-left: 10px;
     color: rgb(179, 179, 162);
     height: 25px;
     margin-bottom: 10px;
@@ -137,5 +147,5 @@ table {
 
 
 .timer-container {
-    margin-left: 80px;
+    margin-left: 120px;
 }
