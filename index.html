@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body onload="onInit()" oncontextmenu="return false">
+<body oncontextmenu="return false" onload="onInit()">
 
     <h1>Minesweeper </h1>
 
@@ -30,7 +30,7 @@
         <button class="btn-dark" onclick="onToggleDarkMode()">dark</button>
     </div>
 
-    <div class="board-container"></div>
+    <div id="noContextMenu" class="board-container"></div>
 
     <h5>Rivka Bashari &#169; 2024</h5>
 
